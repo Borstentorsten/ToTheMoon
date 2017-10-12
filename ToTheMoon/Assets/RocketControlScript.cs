@@ -73,8 +73,7 @@ public class RocketControlScript : MonoBehaviour {
                 // damping of rocket force only when the rocket rotates to the opposite side of this engine
                 force *= forceMultiplicator;
             }
-
-            GUIManager.SetTempDebugText(rotation.ToString());
+            
             rigidBody.AddRelativeForce(new Vector3(0, force, 0));
             forceMultiplier += 0.1f;
             ParticleSystem.Play();
